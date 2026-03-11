@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Insights &amp; Health - Bestie AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e8307d",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#1a0f14",
+                        "soft-blue": "#e0f2fe",
+                        "luteal-soft": "#fef2f2",
+                        "luteal-accent": "#fca5a5",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.25rem", "3xl": "1.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                min-height: 100dvh;
+                -webkit-tap-highlight-color: transparent;
+            }
+        }
+        .soft-glow {
+            box-shadow: 0 0 25px 2px rgba(232, 48, 125, 0.12);
+        }
+        .backdrop-blur-ios {
+            backdrop-filter: blur(25px) saturate(200%);
+            -webkit-backdrop-filter: blur(25px) saturate(200%);
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .nav-active-glow {
+            position: relative;
+        }
+        .nav-active-glow::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background: #e8307d;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #e8307d;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<header class="sticky top-0 z-50 bg-white/70 dark:bg-background-dark/70 backdrop-blur-ios px-4 py-4 flex items-center justify-between border-b border-primary/5">
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-[20px]">arrow_back_ios_new</span>
+</button>
+</div>
+<h1 class="text-md font-bold tracking-tight text-slate-900 dark:text-slate-100 text-center flex-1">Insights &amp; Health</h1>
+<div class="flex items-center">
+<button class="p-2 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[20px]">settings_heart</span>
+</button>
+</div>
+</header>
+<main class="px-4 py-6 space-y-6 pb-32">
+<section class="grid grid-cols-3 gap-3">
+<div class="bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm p-3 rounded-2xl border border-white dark:border-white/5 text-center shadow-sm">
+<p class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">Sessions</p>
+<p class="text-xl font-bold text-primary">42</p>
+</div>
+<div class="bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm p-3 rounded-2xl border border-white dark:border-white/5 text-center shadow-sm">
+<p class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">Streak</p>
+<p class="text-xl font-bold text-primary">5d</p>
+</div>
+<div class="bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm p-3 rounded-2xl border border-white dark:border-white/5 text-center shadow-sm">
+<p class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">Focus</p>
+<p class="text-sm font-bold text-primary truncate">Confidence</p>
+</div>
+</section>
+<section class="space-y-4">
+<h2 class="text-sm font-bold flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_month</span>
+                Cycle Tracker
+            </h2>
+<div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-3xl p-5 shadow-sm border border-white dark:border-white/5">
+<div class="flex items-center justify-between mb-5">
+<div class="space-y-0.5">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-widest">Current Phase</span>
+<p class="text-base font-bold text-slate-800 dark:text-slate-100">Luteal Phase</p>
+</div>
+<span class="text-[11px] font-bold text-primary bg-primary/10 px-3 py-1.5 rounded-full border border-primary/10">DAY 22</span>
+</div>
+<div class="relative h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full flex overflow-hidden mb-6">
+<div class="w-[20%] h-full bg-rose-200 opacity-60"></div>
+<div class="w-[20%] h-full bg-sky-200 opacity-60"></div>
+<div class="w-[25%] h-full bg-emerald-200 opacity-60"></div>
+<div class="w-[35%] h-full bg-primary/20 relative">
+<div class="absolute right-[30%] top-1/2 -translate-y-1/2 w-4 h-4 bg-primary border-[3px] border-white dark:border-slate-900 rounded-full shadow-lg"></div>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-1 text-center">
+<span class="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">Menstrual</span>
+<span class="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">Follicular</span>
+<span class="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">Ovulation</span>
+<span class="text-[9px] font-bold text-primary uppercase tracking-tighter">Luteal</span>
+</div>
+</div>
+</section>
+<section>
+<div class="bg-luteal-soft/80 dark:bg-red-950/20 backdrop-blur-sm rounded-3xl p-5 border border-luteal-accent/20 flex gap-4 soft-glow">
+<div class="flex-1 space-y-3">
+<div class="flex items-center gap-2">
+<div class="size-6 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1">auto_awesome</span>
+</div>
+<h3 class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider">Bestie Advice</h3>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        You're in your <span class="text-primary font-bold">Luteal phase</span>—let's go for something extra cozy today!
+                    </p>
+<button class="text-[11px] font-bold text-primary flex items-center gap-1 group">
+                        See more tips <span class="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+<div class="relative group">
+<div class="w-24 h-24 bg-white dark:bg-slate-800 rounded-2xl border border-primary/10 flex items-center justify-center p-1.5 shadow-sm overflow-hidden transform group-hover:scale-[1.02] transition-transform">
+<img alt="Cozy outfit" class="w-full h-full object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxTFyKP4ehEcOuXh9Xh0no8CTV9S4iCSXgk0hqGQS5rKXaicIu9OGkcX8NvaoBCVpiY59PukeA7586CoMJyBqwFxoJS9tCne_pNwkvQqJH8hSIG7Q8sB6zaLRjngoI1gpqQrcKPbb79Buto_1BOxk5jAGSSlTXgyHPXwg7HlPmgD5t2COqPNauSlOqnP6qIHecHYV2lwLZo99WvyORDbsRYUdhpjFQl_lU5lkGzGRxX8T3KnjUhRDw4RNFe2Vi5TQig1L4mWlMk9xJ"/>
+</div>
+<div class="absolute -top-1 -right-1 bg-primary text-white text-[8px] font-bold px-1.5 py-0.5 rounded-full">OOTD</div>
+</div>
+</div>
+</section>
+<section class="space-y-4">
+<h2 class="text-sm font-bold flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary text-[20px]">bubble_chart</span>
+                Mood Distribution
+            </h2>
+<div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-3xl p-6 shadow-sm border border-white dark:border-white/5">
+<div class="flex flex-col items-center">
+<div class="relative size-44 mb-8">
+<svg class="size-full -rotate-90" viewBox="0 0 36 36">
+<circle class="stroke-emerald-200/50" cx="18" cy="18" fill="none" r="16" stroke-dasharray="60 100" stroke-width="4"></circle>
+<circle class="stroke-indigo-200/50" cx="18" cy="18" fill="none" r="16" stroke-dasharray="25 100" stroke-dashoffset="-60" stroke-width="4"></circle>
+<circle class="stroke-primary/40" cx="18" cy="18" fill="none" r="16" stroke-dasharray="15 100" stroke-dashoffset="-85" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-3xl font-bold text-primary">72%</span>
+<span class="text-[9px] uppercase font-bold tracking-widest text-slate-400">Glow Rate</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-6 w-full px-2">
+<div class="flex flex-col items-center gap-1.5">
+<div class="size-2.5 rounded-full bg-emerald-300"></div>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Happy</span>
+<span class="text-sm font-bold">60%</span>
+</div>
+<div class="flex flex-col items-center gap-1.5">
+<div class="size-2.5 rounded-full bg-indigo-300"></div>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Anxious</span>
+<span class="text-sm font-bold">25%</span>
+</div>
+<div class="flex flex-col items-center gap-1.5">
+<div class="size-2.5 rounded-full bg-primary/50"></div>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Lit</span>
+<span class="text-sm font-bold">15%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="space-y-4">
+<h2 class="text-sm font-bold flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary text-[20px]">bar_chart</span>
+                Chat Frequency
+            </h2>
+<div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-3xl p-6 shadow-sm border border-white dark:border-white/5">
+<div class="flex justify-between items-end h-28 gap-3 mb-6">
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary/5 rounded-full flex items-end overflow-hidden h-full">
+<div class="w-full bg-primary/20 h-[40%] rounded-full"></div>
+</div>
+<span class="text-[9px] font-bold text-slate-400">M</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary/5 rounded-full flex items-end overflow-hidden h-full">
+<div class="w-full bg-primary/30 h-[65%] rounded-full"></div>
+</div>
+<span class="text-[9px] font-bold text-slate-400">T</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary/5 rounded-full flex items-end overflow-hidden h-full">
+<div class="w-full bg-primary/10 h-[30%] rounded-full"></div>
+</div>
+<span class="text-[9px] font-bold text-slate-400">W</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary/5 rounded-full flex items-end overflow-hidden h-full">
+<div class="w-full bg-primary/40 h-[85%] rounded-full"></div>
+</div>
+<span class="text-[9px] font-bold text-slate-400">T</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary/10 rounded-full flex items-end overflow-hidden h-full shadow-inner">
+<div class="w-full bg-primary h-[100%] rounded-full"></div>
+</div>
+<span class="text-[9px] font-bold text-primary">F</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary/5 rounded-full flex items-end overflow-hidden h-full">
+<div class="w-full bg-primary/20 h-[45%] rounded-full"></div>
+</div>
+<span class="text-[9px] font-bold text-slate-400">S</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-primary/5 rounded-full flex items-end overflow-hidden h-full">
+<div class="w-full bg-primary/10 h-[25%] rounded-full"></div>
+</div>
+<span class="text-[9px] font-bold text-slate-400">S</span>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-primary/5 rounded-2xl">
+<span class="material-symbols-outlined text-primary text-sm">auto_awesome</span>
+<p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium">
+                        You shared 24 moments with your Bestie this week! 🌸
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-white/60 dark:bg-background-dark/60 backdrop-blur-ios border-t border-primary/5 px-6 pb-8 pt-3 z-50">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<a class="flex-1 flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[26px]">auto_awesome</span>
+<span class="text-[10px] font-bold uppercase tracking-[0.05em]">Chat</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1 text-primary nav-active-glow" href="#">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1">bar_chart_4_bars</span>
+<span class="text-[10px] font-bold uppercase tracking-[0.05em]">Insights</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-[26px]">checkroom</span>
+<span class="text-[10px] font-bold uppercase tracking-[0.05em]">Outfits</span>
+</a>
+<a class="flex-1 flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-all duration-300" href="#">
+<div class="size-7 rounded-full border-2 border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-[20px] opacity-40">person</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-[0.05em]">Profile</span>
+</a>
+</div>
+</nav>
+
+</body></html>

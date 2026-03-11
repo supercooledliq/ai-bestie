@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auth and Empowerment - AI Bestie</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e8307d",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#211118",
+                        "soft-pink": "#fceef3",
+                        "glass-pink": "rgba(255, 255, 255, 0.7)",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Image Section -->
+<div class="h-[40vh] w-full relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Soft pink sunset with fluffy clouds and pastel colors" style='background-image: linear-gradient(180deg, rgba(232, 48, 125, 0.2) 0%, rgba(248, 246, 247, 1) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJogn0RATSA6h2tLv7ypHkC1QMJeQ7SlecoQp9SqC-9NC7ualKuvk_XW414jS8fGMFdt-l8iQF6OPGtuESb1NPyaD2f5d4cUC5Vgj-VpYaBVN7vzeW-Z6nvp24ezEqdgPGXuPKW1LaEr9N7DjB0Ak4iVvBy3XjMqbNi1gCz4Bb46la0WRZHVcMjFBtfTJ3V0B9PkRC3V-u1BvWlg8RcPT18_hxqp3_2KnJnXVDmLfYlaD0NKXqL-QKkAsVOvkB1IHAAxcw62MqaDc1");'>
+</div>
+<div class="relative h-full flex flex-col items-center justify-center px-8 text-center">
+<h1 class="text-primary text-3xl font-bold leading-tight drop-shadow-sm">You are your own muse.</h1>
+<p class="text-primary/70 mt-2 font-medium">Empower your journey with AI Bestie</p>
+</div>
+</div>
+<!-- Glassmorphism Auth Card -->
+<div class="flex-1 -mt-10 px-4 pb-10 z-10">
+<div class="bg-glass-pink/60 dark:bg-background-dark/80 backdrop-blur-xl rounded-2xl shadow-xl border border-white/40 dark:border-primary/20 p-6 flex flex-col gap-6">
+<!-- Toggle Switch -->
+<div class="flex h-12 w-full items-center justify-center rounded-xl bg-primary/10 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:shadow-sm has-[:checked]:text-primary text-primary/60 text-sm font-semibold transition-all">
+<span class="truncate">Login</span>
+<input checked="" class="invisible w-0" name="auth-toggle" type="radio" value="Login"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:shadow-sm has-[:checked]:text-primary text-primary/60 text-sm font-semibold transition-all">
+<span class="truncate">Sign Up</span>
+<input class="invisible w-0" name="auth-toggle" type="radio" value="Sign Up"/>
+</label>
+</div>
+<!-- Form Fields -->
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-primary text-sm font-semibold px-1">Email</label>
+<input class="w-full rounded-xl border-none bg-soft-pink/50 dark:bg-primary/5 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary/30 h-14 px-4 placeholder:text-primary/40 text-base" placeholder="hello@beautiful.com" type="email"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-primary text-sm font-semibold px-1">Password</label>
+<div class="relative flex items-center">
+<input class="w-full rounded-xl border-none bg-soft-pink/50 dark:bg-primary/5 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary/30 h-14 px-4 pr-12 placeholder:text-primary/40 text-base" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 text-primary/60">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Primary Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold h-14 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+                    Continue
+                </button>
+<!-- Divider -->
+<div class="flex items-center gap-4 py-2">
+<div class="h-px flex-1 bg-primary/20"></div>
+<span class="text-primary/40 text-xs font-bold uppercase tracking-widest">or connect with</span>
+<div class="h-px flex-1 bg-primary/20"></div>
+</div>
+<!-- Social Logins -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 h-12 rounded-xl bg-white border border-primary/10 shadow-sm text-slate-700 font-medium active:bg-slate-50">
+<img alt="Google" class="w-5 h-5" data-alt="Google colorful G logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwcIo8MJOldodxOItrzJYyD6ej1hO1jkeOo2oCVITaDjsrOZYVJnXkfs29sMizObwLFhBI01qojHD-Lms2dI2s9RGqy69YTsgz-sIdi9MJrGaW7YanCrPOInj0Cssnk6HkZPGd-7nKsYOKMzs7erV6s3tBJbmMGmjLOIR6bnEs2eCrFXBBjwO9UGCijVifInWHCBeHZ6ArdgmPktukpNez5c2YSmcnHggGoAs0IhYGRQJfxh7yTONzggaHY66lloMB1G2WdXsRd171"/>
+<span>Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 h-12 rounded-xl bg-slate-900 border border-slate-900 shadow-sm text-white font-medium active:opacity-90">
+<span class="material-symbols-outlined text-xl">ios</span>
+<span>Apple</span>
+</button>
+</div>
+<!-- Footer Link -->
+<p class="text-center text-sm text-primary/60">
+                    Forgot your password? <a class="text-primary font-bold" href="#">Get help</a>
+</p>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="fixed top-20 -left-10 w-32 h-32 bg-primary/10 blur-3xl rounded-full"></div>
+<div class="fixed bottom-20 -right-10 w-40 h-40 bg-primary/10 blur-3xl rounded-full"></div>
+</div>
+</body></html>

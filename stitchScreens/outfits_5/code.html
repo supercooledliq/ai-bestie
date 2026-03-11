@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Closet - Soft Glam</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "soft-pink": "#fce7f3",
+                        "soft-lavender": "#f3f0ff",
+                        "glam-lavender": "#e9d5ff",
+                        "cream": "#fffcf9",
+                        "accent-pink": "#f472b6",
+                        "soft-rose": "#fb7185",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.6);
+            --lavender-glow: 0 0 20px rgba(233, 213, 255, 0.5);
+            --nav-glass-bg: rgba(255, 255, 255, 0.7);
+            --ai-glow: 0 0 25px rgba(251, 113, 133, 0.2);
+        }
+        body {
+            min-height: max(844px, 100dvh);
+            background: linear-gradient(135deg, #fffcf9 0%, #fce7f3 50%, #f3f0ff 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-1 {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px 0 rgba(244, 114, 182, 0.05);
+        }
+        .ai-recommendation-card {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(251, 113, 133, 0.3);
+            box-shadow: var(--ai-glow);
+        }
+        .pedestal-lavender {
+            background: radial-gradient(50% 50% at 50% 50%, #e9d5ff 0%, rgba(233, 213, 255, 0) 100%);
+            filter: blur(4px);
+        }
+        .nav-glass {
+            background: var(--nav-glass-bg);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        .img-soft-lighting {
+            filter: contrast(0.9) brightness(1.05) saturate(0.9);
+        }
+        .glowing-dot {
+            box-shadow: 0 0 8px #fb7185;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display text-slate-800 flex items-center justify-center min-h-screen">
+<div class="relative flex h-[844px] w-[390px] flex-col bg-white overflow-hidden shadow-2xl rounded-[3rem] border-[8px] border-slate-900">
+<div class="h-11 w-full flex items-center justify-between px-8 bg-transparent shrink-0 z-50">
+<span class="text-[14px] font-bold text-slate-700">9:41</span>
+<div class="flex gap-1.5 text-slate-700 items-center">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[18px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col overflow-hidden">
+<div class="px-5 pt-2 pb-4 shrink-0">
+<div class="ai-recommendation-card rounded-3xl p-5 flex flex-col gap-3 relative overflow-hidden">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-xs">✨</span>
+<h3 class="text-[11px] font-bold uppercase tracking-[0.15em] text-soft-rose">Bestie Suggestion</h3>
+</div>
+<p class="font-serif italic text-[15px] leading-relaxed text-slate-700">
+                        "Since you have that big presentation tomorrow, here’s a confident, professional look paired with your favorite blazer!"
+                    </p>
+<div class="flex items-center gap-3 mt-1">
+<div class="w-16 h-16 rounded-xl overflow-hidden glass-card border-white/40 flex-shrink-0">
+<img alt="Suggested Look" class="w-full h-full object-cover img-soft-lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuuT127hjbpRLqL3eu8uPiQCfn-BrGf3SV0sAv-U9uocvhfUdU37XVx9YxkJgm9VnE0oPjk0Sz-1Txj_5auiS7D6Yo74s8YiWV9KEymmLOmUaMWbkAI8ebaEaUHB69L3MNDUlH1S4xVRO_sASATsY7vt5s9C9TtfAWPOrxvPNq_DH9VhRdIcFNFdrxmDjdF_Zlpr9xhhm9Dm5nUVn-46Lg_ecLxgOMIqAPRBo4pTmu-x65BvWPnu3QJzMgUyBPBvxF_aOLUINQvF3n"/>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-tight">Power Dressing</span>
+<button class="text-[12px] font-serif italic text-soft-rose flex items-center gap-1">
+                                View details <span class="material-symbols-outlined text-[14px]">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<div class="absolute -right-4 -top-4 w-16 h-16 bg-soft-pink/30 rounded-full blur-2xl"></div>
+</div>
+</div>
+<div class="flex-1 flex overflow-hidden">
+<div class="w-[45%] relative flex flex-col items-center justify-center bg-gradient-to-b from-transparent to-soft-lavender/30">
+<div class="absolute top-4 left-6 opacity-40">
+<span class="material-symbols-outlined text-slate-400">auto_fix_high</span>
+</div>
+<div class="relative flex flex-col items-center">
+<div class="z-20 transform -translate-y-4">
+<img alt="Full Outfit Preview" class="w-40 h-52 object-contain drop-shadow-xl img-soft-lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQxy_SJXDIg3u5cBs9MS1fsCXWGF-JOIgsXpbYFK6Mr3CDj4zqvZe5tccKc1s12zInsSj0pSj7dG_PZAOeL6hkCFDHP_BTPvhqHd4QPVXiQaoPaYTwVqnUreRfXXBetd4rCs38P0gZfCmEPtFUhoHnaMGZIlwVLi3CMkr71tRbcI7nYbvWnZpSYi7fWKBiS-xZnHbTmuzj_GwD1tybZbsarlYXwZ5NtAh7_UxlhT_C3M8o_CD2aZxFUE7lizYlBGXQg5cD4PxlNvZg"/>
+</div>
+<div class="absolute bottom-4 w-32 h-6 pedestal-lavender rounded-[100%]"></div>
+<div class="w-32 h-10 bg-white/40 rounded-t-full backdrop-blur-md -mt-4 border-t border-white/60"></div>
+</div>
+<div class="mt-6 text-center px-4">
+<h2 class="font-serif italic text-lg text-slate-700 mb-1">Today's Look</h2>
+<p class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Ready for magic</p>
+</div>
+<button class="mt-8 glass-card px-5 py-2.5 rounded-full border border-white/50 shadow-sm flex items-center gap-2 active:scale-95 transition-all">
+<span class="text-slate-600 italic font-serif text-sm">try it on</span>
+<span class="material-symbols-outlined text-xs text-pink-300">colors_spark</span>
+</button>
+</div>
+<div class="w-[55%] flex flex-col bg-white/20 backdrop-blur-md border-l border-white/40">
+<div class="pt-4 pb-2 px-3 overflow-x-auto no-scrollbar flex gap-4 items-center justify-start border-b border-white/20">
+<button class="text-[11px] font-bold uppercase tracking-wider text-pink-400 border-b-2 border-pink-400 pb-1 shrink-0">tops</button>
+<button class="text-[11px] font-medium uppercase tracking-wider text-slate-400 pb-1 shrink-0">bottoms</button>
+<button class="text-[11px] font-medium uppercase tracking-wider text-slate-400 pb-1 shrink-0">shoes</button>
+</div>
+<div class="flex-1 overflow-y-auto no-scrollbar p-3 pt-4">
+<div class="grid grid-cols-1 gap-4 pb-32">
+<div class="aspect-[1/1.2] rounded-2xl glass-card overflow-hidden p-1">
+<img alt="Blazer" class="w-full h-full object-cover rounded-xl img-soft-lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuuT127hjbpRLqL3eu8uPiQCfn-BrGf3SV0sAv-U9uocvhfUdU37XVx9YxkJgm9VnE0oPjk0Sz-1Txj_5auiS7D6Yo74s8YiWV9KEymmLOmUaMWbkAI8ebaEaUHB69L3MNDUlH1S4xVRO_sASATsY7vt5s9C9TtfAWPOrxvPNq_DH9VhRdIcFNFdrxmDjdF_Zlpr9xhhm9Dm5nUVn-46Lg_ecLxgOMIqAPRBo4pTmu-x65BvWPnu3QJzMgUyBPBvxF_aOLUINQvF3n"/>
+</div>
+<div class="aspect-[1/1.2] rounded-2xl glass-card overflow-hidden p-1">
+<img alt="Floral Dress" class="w-full h-full object-cover rounded-xl img-soft-lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzwvw5TjzFjyc8xlnpOIUlPcFEN21ouGxT8LVW5ORqXWfdXOf8B7OHoNKCv-RCUWB9AjXwe2f9Okw-vcqhaDyxTqiKJi-ksxxNPVvlY7NRZlPMeH5lGtyakmSFcLOBERvFKh4gzAGfRBc5p5x5mMBWagJwzWqgHbgCSc-zVYI2W-dj7TX6WcmLP8WTPcr2uJ-yAWdKtWt1Jar9AUZf5A9pzI5Lq8O8R-Py3P8Z7tTWn7LgDaFmHCpni9sj_QTYZYP7Cx1gZFbpZb7Z"/>
+</div>
+<div class="aspect-[1/1.2] rounded-2xl glass-card overflow-hidden p-1">
+<img alt="Knitwear" class="w-full h-full object-cover rounded-xl img-soft-lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJkgLQ-4F-uRMwkPt92Djess7WuPL8jkZjVVue06K7AUqM76DoQVJsxXmPS2kCRlGoqtF-2J3gsMaYYxRst8WO-Aja4y-teAOV9dm8lyrVbcqbKTU1xNih1uHriqWBDhsNZtY78x_RZXECSzEYOnS-q_0sTXV279bo_yH_SxunpNyTnYzbNqkMs37TKMglvYpn7SJz7HApyJ_wWtT1VcH2MwyY0dvv65XS0oNQ_Gii4VM5rfWCJjYSrZ-37lb9md8kdBsgdO89Vbcy"/>
+</div>
+<div class="aspect-[1/1.2] rounded-2xl glass-card overflow-hidden p-1">
+<img alt="Silk Blouse" class="w-full h-full object-cover rounded-xl img-soft-lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxLNNUCx4jMSQdptYkPtSIksrtWiXrnLws2kKHV_JA8_38vsNr7gkdNv--g65wJPdDC9BOYlXgFQpHI_adYwA7ni7oEK3XwWF_xbWqn5ESn1BlftVkG7I0A5c1AZ3DrUdZwfKPYHfahUFfidsRv2Gz6POX1CqULjACADu4ah1wu2zey0i_oF2zETk3hNFMOyzHxePuy16_Pfu-I2-qjVaR2ybf4Av8TxbRl6rrxTAkS04R-DtqozYHptEVNU2xiXSiNg6pDi0go_lX"/>
+</div>
+<button class="aspect-[1/1.2] rounded-2xl bg-white/40 border-2 border-dashed border-white/80 flex flex-col items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-pink-300 text-3xl font-light">add_circle</span>
+<span class="text-[9px] uppercase tracking-tighter font-bold text-slate-400">Add Item</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 w-full nav-glass px-6 pt-4 pb-10 z-50 rounded-t-[2.5rem]">
+<div class="flex justify-between items-center max-w-[320px] mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-soft-rose transition-colors duration-300" href="#">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Chat</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-soft-rose transition-colors duration-300" href="#">
+<span class="material-symbols-outlined text-[24px]">bar_chart</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Insights</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-soft-rose" href="#">
+<div class="relative flex flex-col items-center">
+<span class="material-symbols-outlined text-[26px] fill-1">checkroom</span>
+<p class="text-[10px] font-serif italic tracking-wide mt-0.5">Outfits</p>
+<div class="absolute -bottom-2 w-1 h-1 bg-soft-rose rounded-full glowing-dot"></div>
+</div>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-soft-rose transition-colors duration-300" href="#">
+<div class="w-6 h-6 rounded-full border border-slate-200 bg-white overflow-hidden flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-slate-300">account_circle</span>
+</div>
+<p class="text-[10px] font-bold uppercase tracking-wider">Profile</p>
+</a>
+</div>
+<div class="flex justify-center mt-6">
+<div class="w-32 h-1.5 bg-slate-900/10 rounded-full"></div>
+</div>
+</div>
+</div>
+
+</body></html>

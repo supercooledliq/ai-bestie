@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Vault Chat History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e8307d",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#211118",
+                        "soft-lavender": "#f3e8ff",
+                        "soft-rose": "#fce7f3",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-bg-dark: rgba(33, 17, 24, 0.85);
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+        .soft-glam-gradient {
+            background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 50%, #f5f3ff 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-screen w-full flex-col overflow-hidden max-w-[430px] mx-auto bg-white dark:bg-background-dark shadow-2xl">
+<header class="sticky top-0 z-10 flex items-center justify-between bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 border-b border-primary/10">
+<button class="flex items-center justify-center h-10 w-10 rounded-full hover:bg-primary/5">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-200 text-xl">arrow_back_ios_new</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-50">The Vault</h1>
+<button class="flex items-center justify-center h-10 w-10 rounded-full hover:bg-primary/5">
+<span class="material-symbols-outlined text-slate-700 dark:text-slate-200 text-2xl">search</span>
+</button>
+</header>
+<div class="px-4 py-3 bg-white dark:bg-background-dark">
+<div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+<button class="px-4 py-1.5 rounded-full bg-primary text-white text-sm font-semibold whitespace-nowrap">All Chats</button>
+<button class="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold whitespace-nowrap border border-primary/20">Favorites</button>
+<button class="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold whitespace-nowrap border border-primary/20">Reflections</button>
+<button class="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold whitespace-nowrap border border-primary/20">Mood Tracker</button>
+</div>
+</div>
+<main class="flex-1 overflow-y-auto soft-glam-gradient dark:bg-background-dark px-4 py-4 space-y-4">
+<h3 class="text-xs font-bold uppercase tracking-widest text-primary/60 px-1 mb-2">Recent Sessions</h3>
+<div class="group relative flex flex-col gap-3 bg-white/90 dark:bg-slate-900/50 backdrop-blur-sm p-4 rounded-xl border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-soft-rose text-2xl shadow-inner">✨</div>
+<div class="flex flex-col">
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Feeling Radiant Today</h4>
+<span class="text-[10px] font-semibold text-primary uppercase">Oct 24 • 10:15 AM</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed italic">
+                    "I'm feeling so much more confident after our talk about boundaries. You really helped me see things clearly..."
+                </p>
+</div>
+<div class="group relative flex flex-col gap-3 bg-white/90 dark:bg-slate-900/50 backdrop-blur-sm p-4 rounded-xl border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-soft-lavender text-2xl shadow-inner">🌸</div>
+<div class="flex flex-col">
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Morning Reflections</h4>
+<span class="text-[10px] font-semibold text-primary uppercase">Oct 22 • 08:30 AM</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed italic">
+                    "Remember that you are enough, exactly as you are. We practiced that breathing exercise and it felt so peaceful..."
+                </p>
+</div>
+<div class="group relative flex flex-col gap-3 bg-white/90 dark:bg-slate-900/50 backdrop-blur-sm p-4 rounded-xl border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-2xl shadow-inner">☁️</div>
+<div class="flex flex-col">
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Midnight Thoughts</h4>
+<span class="text-[10px] font-semibold text-primary uppercase">Oct 20 • 11:45 PM</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed italic">
+                    "It’s okay to have down days, bestie. We talked about processing the stress from work and letting it go before sleep..."
+                </p>
+</div>
+<div class="group relative flex flex-col gap-3 bg-white/90 dark:bg-slate-900/50 backdrop-blur-sm p-4 rounded-xl border border-primary/5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50 text-2xl shadow-inner">☀️</div>
+<div class="flex flex-col">
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Weekly Wins Chat</h4>
+<span class="text-[10px] font-semibold text-primary uppercase">Oct 18 • 02:00 PM</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed italic">
+                    "Celebrating that job offer! We listed all your strengths today and you were absolutely glowing with pride..."
+                </p>
+</div>
+<div class="h-28"></div>
+</main>
+<button class="absolute bottom-28 right-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/30 hover:scale-105 transition-transform active:scale-95 z-20">
+<span class="material-symbols-outlined text-2xl">add</span>
+</button>
+<nav class="sticky bottom-0 z-30 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl border-t border-primary/10 pt-3 pb-8 px-6">
+<div class="flex items-center justify-between max-w-sm mx-auto">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px] text-primary transition-all duration-300 transform group-hover:scale-110" style="font-variation-settings: 'FILL' 1;">auto_awesome_motion</span>
+</div>
+<span class="text-[10px] font-bold tracking-widest uppercase text-primary">Chat</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px] text-slate-400 group-hover:text-primary transition-all duration-300">bar_chart_4_bars</span>
+</div>
+<span class="text-[10px] font-bold tracking-widest uppercase text-slate-400 group-hover:text-primary transition-colors">Insights</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px] text-slate-400 group-hover:text-primary transition-all duration-300">checkroom</span>
+</div>
+<span class="text-[10px] font-bold tracking-widest uppercase text-slate-400 group-hover:text-primary transition-colors">Outfits</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="relative flex items-center justify-center">
+<div class="h-7 w-7 rounded-full border-2 border-slate-300 group-hover:border-primary transition-colors overflow-hidden bg-slate-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-xl text-slate-400 group-hover:text-primary">person</span>
+</div>
+</div>
+<span class="text-[10px] font-bold tracking-widest uppercase text-slate-400 group-hover:text-primary transition-colors">Profile</span>
+</a>
+</div>
+</nav>
+<div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 h-1 w-32 bg-slate-300 dark:bg-slate-700 rounded-full z-40"></div>
+</div>
+
+</body></html>

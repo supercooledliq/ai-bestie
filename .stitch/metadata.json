@@ -1,0 +1,47 @@
+{
+  "name": "projects/789961818372648503",
+  "projectId": "789961818372648503",
+  "title": "AI Bestie Project",
+  "visibility": "PRIVATE",
+  "createTime": "2026-03-11T04:42:19.901588Z",
+  "updateTime": "2026-03-11T05:07:53.627746Z",
+  "projectType": "PROJECT_DESIGN",
+  "origin": "STITCH",
+  "deviceType": "MOBILE",
+  "designTheme": {
+    "colorMode": "LIGHT",
+    "font": "PLUS_JAKARTA_SANS",
+    "roundness": "ROUND_FULL",
+    "customColor": "#e8307d",
+    "saturation": 2
+  },
+  "screens": {
+    "login_variant_1": {
+      "id": "ef476f315242414e870bc7a3475a6e1e",
+      "sourceScreen": "projects/789961818372648503/screens/ef476f315242414e870bc7a3475a6e1e",
+      "x": 0,
+      "y": 0,
+      "width": 780,
+      "height": 2008
+    },
+    "signup_variant_2": {
+      "id": "14f946c27d7a42a49f222d720d991f91",
+      "sourceScreen": "projects/789961818372648503/screens/14f946c27d7a42a49f222d720d991f91",
+      "x": 840,
+      "y": 0,
+      "width": 780,
+      "height": 1768
+    },
+    "chatHistory_2": {
+      "id": "1dff128a6a5f4aefb57b9fdc9f94b35e",
+      "sourceScreen": "projects/789961818372648503/screens/1dff128a6a5f4aefb57b9fdc9f94b35e",
+      "x": 1680,
+      "y": 0,
+      "width": 780,
+      "height": 1768
+    }
+  },
+  "metadata": {
+    "userRole": "OWNER"
+  }
+}
